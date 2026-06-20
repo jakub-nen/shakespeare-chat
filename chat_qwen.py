@@ -20,6 +20,8 @@ python chat_qwen.py `
   --base_model .\models\Qwen2.5-3B-Instruct `
   --adapter_dir .\out\lora_shakespeare_qwen3b_light `
   --rag_file .\data\rag_chunks_v3.jsonl 
+  
+## YOU CAN ADD --show_fact i --show_rag to check what model "think" during anserws
 """
 SCRIPT_DIR = Path(__file__).resolve().parent
 ORIGINAL_CWD = Path.cwd()
