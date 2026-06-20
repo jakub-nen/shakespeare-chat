@@ -1,69 +1,171 @@
-# Shakespeare Chat
+# Shakespeare Qwen Chat
 
-Minimal LoRA fine-tuning setup for `meta-llama/Llama-3.2-1B-Instruct` with .
+Small minimal local project for a Shakespeare-style chatbot with LoRA fine tuning and RAG.
+The project uses:
 
-## 1. Download Llama model
+- `Qwen/Qwen2.5-3B-Instruct` as the base model
+- a LoRA adapter for Shakespeare-like style
+- RAG chunks for facts about Shakespeare
+- FAISS for searching the RAG text during chat
 
-First accept access to the model on Hugging Face:
+The base model is not included in this repo. You have to download it yourself.
 
-```text
-meta-llama/Llama-3.2-1B-Instruct
-```
+---
 
-Then login:
 
-```powershell
-hf auth login
-```
-
-Run from the project folder:
+## Install requirements
 
 ```powershell
-mkdir models
-hf download meta-llama/Llama-3.2-1B-Instruct --local-dir .\models\Llama-3.2-1B-Instruct
+pip install -r requirements.txt
 ```
 
-Model will be saved in:
-
-```text
-models\Llama-3.2-1B-Instruct
-```
-
-## 2. Install requirements
+If Torch installs without CUDA, install CUDA Torch first:
 
 ```powershell
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-pip install -r requirements_lora_cuda.txt
+pip install -r requirements.txt
 ```
 
-## 3. Train LoRA
+---
+
+## Download Qwen
 
 ```powershell
-python train_lora_cuda.py `
-  --model_name .\models\Llama-3.2-1B-Instruct `
-  --output_dir .\outputs\shakespeare_lora_5ep `
-  --epochs 5 `
-  --learning_rate 3e-5 `
-  --max_seq_length 768 `
-  --batch_size 1 `
-  --grad_accum 16 `
-  --save_steps 100 `
-  --eval_steps 50 `
-  --logging_steps 10
+pip install -U huggingface_hub
+mkdir models
+hf download Qwen/Qwen2.5-3B-Instruct --local-dir .\models\Qwen2.5-3B-Instruct
 ```
 
-Output adapter:
+After this, the model should be here:
 
 ```text
-outputs\shakespeare_lora_5ep
+models/Qwen2.5-3B-Instruct/
 ```
 
-## 4. Chat with trained model
+---
+
+## Training
+
+Training is done with:
+
+```text
+train_qwen.py
+```
+
+It reads:
+
+```text
+data/shakespeare.txt
+```
+
+and creates a LoRA adapter:
+
+```text
+out/lora_shakespeare_qwen3b_light/
+```
+
+Run:
 
 ```powershell
-python chat_lora_console.py `
-  --base_model .\models\Llama-3.2-1B-Instruct `
-  --adapter_dir .\outputs\shakespeare_lora_5ep
+python train_qwen.py `
+  --model .\models\Qwen2.5-3B-Instruct `
+  --txt .\data\shakespeare.txt `
+  --out_dir .\out\lora_shakespeare_qwen3b_light
 ```
 
-Type `exit` or `quit` to stop chat.
+The training is only for style. Facts are not stored in the LoRA adapter.
+
+You do not need to train again these files already exist:
+
+```text
+out/lora_shakespeare_qwen3b_light/adapter_config.json
+out/lora_shakespeare_qwen3b_light/adapter_model.safetensors
+```
+
+---
+
+## Chat
+
+Chat is done with:
+
+```text
+chat_qwen.py
+```
+
+Run:
+
+```powershell
+python chat_qwen.py `
+  --base_model .\models\Qwen2.5-3B-Instruct `
+  --adapter_dir .\out\lora_shakespeare_qwen3b_light `
+  --rag_file .\data\rag_chunks_v3.jsonl
+```
+
+
+---
+
+## How it works
+
+During chat:
+
+```text
+question
+  -> FAISS searches data/rag_chunks_v3.jsonl
+  -> Qwen extracts a plain factual answer
+  -> LoRA rewrites it in Shakespeare-like style
+```
+
+FAISS cache is created automatically in:
+
+```text
+data/.rag_cache/
+```
+
+
+---
+
+## Example results
+
+Some answers are good:
+
+```text
+> How many children Shakespeare have?
+
+Three Children doth thus speak, O most assured truth!
+```
+
+```text
+> What are some of Shakespeare's most famous tragedies?
+
+Hamlet, Othello, King Lear, and Macbeth,
+These are the plays of mighty wits that have
+Shaped their actions to the world’s applause.
+```
+
+It can also refuse unknown facts:
+
+```text
+> What was Shakespeare's favorite food?
+
+I cannot thus dish out his diet,
+Nor will I tell what meats he did prefer.
+My sources are not so impertinent,
+To utter such a paltry and unprofitable item.
+```
+
+Some answers are weaker. For example, it sometimes gets the main fact right but adds invented details after it. So this is a working RAG + LoRA prototype, not a perfect factual assistant. Check example_dialog.txt or try yourself.
+
+
+## Stop
+
+Type:
+
+```text
+exit
+```
+
+or:
+
+```text
+quit
+```
