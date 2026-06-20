@@ -1,0 +1,142 @@
+
+> How many children Shakespeare have?
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+Three Children doth thus speak, O most assured truth!
+
+> WHat where they name?
+
+Nay, thus doth not my tongue the text rehearse,
+Nor from the book of facts do I derive.
+
+> What where name of his children?
+
+Susanna, Hamnet, and Judith, they three,
+Whose lives were blest with life’s most sweetest hours,
+Did oft their father’s hand with loving hands
+Untwist his cares, and comfort him of griefs.
+Yet did they live but to their parents’ sight,
+And left them empty-handed, as they came.
+So ended these fair children, who had grace
+To die in childhood, ere the world grew old.
+But let us leave their graves, and speak no more
+Of those that are, till we come to them that are not.
+
+> Where was he born?
+
+And Stratford-on-Avon, where did erstly stand,
+The town that did by gentle river bestride,
+Where oft the Bard his youthful days did spend,
+In thought and study, there to muse and meditate.
+Yet, though he oft from thence did wander forth,
+To London’s court for wits and men of worth,
+To Cambridge too, as oft did studious seek
+For knowledge to acquire, and learn what was new;
+There did he oft discourse with many a sage,
+And with the learned, and the wise did range.
+But still did Oxford’s town retain his heart,
+And all his thoughts were there, till death should part.
+Then when his life did end, there did he lie,
+In quiet grave, beneath the churchyard’s side,
+Where many an eye did weep, that oft had seen
+His face in publick walks, or at his play.
+
+> Tell me about kings
+
+I tell thee thus much of kings, as I do know,
+That they are subjects to the will of heaven,
+And subject to misfortune and disease,
+As other men, with all their power and might,
+Are subject to the sun, and moon, and stars,
+And to the changeable and varying seasons,
+Which yet can never overthrow or shake
+Their natural course, nor alter their decrees,
+But still obey the sovereign hand of God,
+Who governs them, and every other thing,
+In their appointed time and place assigned.
+So kings may rule, and yet be subject too,
+To fortune's fickle and unconstant wheel,
+Which doth from time to time confound and toss
+Both great and small, and oftentimes subdue
+The mighty to the lowly, and the high
+To stoop and serve the meaner creatures here,
+Which cannot but observe the sovereign power
+Of him who hath the government above,
+And is the maker of the world and man,
+And of all things both living and inanimate.
+
+> Do we know Shakespeare most favorite color?     
+
+No such question was asked of me nor answered by mine own pen.
+
+> Who did Shakespeare marry?
+
+Anne, that art of all thy sex the gemme,
+The sunne’s rayes to thy fair face compare,
+And there as tenderly thou dost dwell,
+As doth the moon in clouds her modest sphere;
+Thou art thy fathers joy, thy mothers pride,
+The beautie of thy country, and the hope
+Of those which live under thy gracious sway.
+Yet have I heard some speak of thee with fear,
+Who say, thou dost not use thy power so well
+But what they think is tyranny doth seeme.
+I pray thee then, let this thy present grace,
+Which is but short, do make an end of wrongs,
+That are for evermore condemned in thee.
+
+> What are Shakespeare's sonnets?
+
+In Sonnets so many, as one hundred and five,
+Published in 1609 by name’s own right,
+Are penned by none but that most famous muse,
+Whose verse, as oft as breath his lips can move,
+The world in admiration doth embrace,
+And all the courts of love attend to hear.
+Thus Shakespeare’s Sonnets, in their form and rhyme,
+Doth captivate the hearts and minds of men,
+As oft as poets’ works will ever be.
+
+> What are some of Shakespeare's most famous tragedies?
+
+Hamlet, Othello, King Lear, and Macbeth,  
+These are the plays of mighty wits that have  
+Shaped their actions to the world’s applause,  
+And left behind them volumes wherein they  
+Have recorded their own virtues.
+
+> What was Shakespeare's favorite food?
+
+I cannot thus dish out his diet,
+Nor will I tell what meats he did prefer.
+My sources are not so impertinent,
+To utter such a paltry and unprofitable item.
+
+> Explain ambition
+
+Ambition is the seed that doth spring up
+In men’s minds like an oak or a cedar tree,
+That will with patience and time shoot and grow.
+’Tis the desire of some more than their might
+To raise themselves to great estate and height,
+As spiders’ eggs that, being but small and light,
+Are drawn by their threads into the lofty heavens.
+And if they once take hold, as doth ambition,
+They never can be left till they achieve.
+It is as easy for a man to rise
+From a dunghill to a throne, as from thence
+To slide down again into a dunghill.
+Ambition is the root of all diseases
+Of body politic; it maketh men mad;
+It maketh kings mad; ’tis the ruin of princes.
+It breedeth envy; it causeth murder, blood;
+For when it is in blood-stained hands, what care they
+To slay? They would not think it wrong to kill
+The innocent, yea, to the very child
+Would they not dare. It doth make men traitors,
+And makes them do most monstrous things indeed,
+But most of all, it maketh fools to fear
+The wise, who know they cannot harm themself.
+So much
+
+> 
